@@ -1,0 +1,22 @@
+---
+layout: page
+permalink: journals/eep/2017/33-3
+page-title:  "Journal | Eastern European Politics"
+breadcrumb-active: "2017 Vol.33 No.3"
+breadcrumb: "Eastern European Politics"
+articles:
+- type: "Introduction"
+  title: 'Eastern Partnership: bringing “the political” back in'
+  author: "Elena Korosteleva"
+  text: "Some quick example text to build on the card title and make up the bulk of the card's content."
+  link: "http://www.tandfonline.com/doi/full/10.1080/21599165.2017.1340882"
+
+- type: "Article"
+  title: 'Bringing “the political” back into European security: challenges to the EU’s ordering of the Eastern Partnership'
+  author: "Licínia Simão"
+  text: "Some quick example text to build on the card title and make up the bulk of the card's content."
+  link: "http://www.tandfonline.com/doi/full/10.1080/21599165.2017.1326098"
+
+date:   2017-08-18 15:19:54 +0200
+categories: jekyll update
+---

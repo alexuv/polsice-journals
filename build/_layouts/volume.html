@@ -4,29 +4,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Journal | Eastern European Politics</title>
+	<title>
+		{{page.page-title}}
+	</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" href="../../stylesheets/main.css">
 </head>
 <body>
 	<nav class="breadcrumb">
-	  <a class="breadcrumb-item" href="../../index.html">Home</a>
-	  <span class="breadcrumb-item active">Eastern European Politics</span>
+	  <a class="breadcrumb-item" href="../../">Home</a>
+	  <span class="breadcrumb-item active">{{page.breadcrumb-active}}</span>
 	</nav>
-	<div class="container mt-5">
-		<div class="row">
+	<div class="container">
+		{% for volume in page.volumes %}
+
+		<div class="row mt-5">
 			<div class="card__wrap">
 					<div class="card" style="width: 30rem;">
 						<div class="card-body">
-							<h3 class="card-title">Volume 33, 2017</h3>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="33-2017-3.html" class="card-link">Issue 3</a>
-							<a href="33-2017-2.html" class="card-link">Issue 2</a>
-							<a href="33-2017-1.html" class="card-link">Issue 1</a>
+							<h3 class="card-title">
+								{{volume.title}}
+							</h3>
+							<p class="card-text">
+								{{volume.text}}
+							</p>
+							{% for issue in volume.issues %}
+								<a href="{{issue.link}}" class="card-link">Issue {{issue.number}}</a>
+							{% endfor %}
 						</div>
 					</div>
 			</div>
 		</div>
+
+		{% endfor %}
 	</div>
 </body>
 </html>

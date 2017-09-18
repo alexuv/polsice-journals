@@ -1,0 +1,25 @@
+---
+layout: volume
+permalink: journals/eep/
+page-title:  "Journal | Eastern European Politics"
+breadcrumb-active: "Eastern European Politics"
+volumes:
+- title: "Volume 33, 2017"
+  text: "Some quick example text to build on the card title and make up the bulk of the card's content."
+  issues:
+    - number: "2"
+      link: "2017/33-2"
+    - number: "3"
+      link: "2017/33-3"
+
+- title: "Volume 33, 2018"
+  text: "Some quick example text to build on the card title and make up the bulk of the card's content."
+  issues:
+    - number: "2"
+      link: "2017/33-2"
+    - number: "3"
+      link: "2017/33-3"
+
+date:   2017-08-18 15:19:54 +0200
+categories: jekyll update
+---

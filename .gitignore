@@ -40,3 +40,8 @@ Thumbs.db
 ###########
 node_modules/
 .sass-cache/
+
+# Jekyll #
+_site
+.sass-cache
+.jekyll-metadata

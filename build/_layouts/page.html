@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>{{ page.page-title }}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" href="../../../stylesheets/main.css">
+</head>
+<body>
+	<nav class="breadcrumb">
+	  <a class="breadcrumb-item" href="../../../">Home</a>
+		<a class="breadcrumb-item" href="../">{{page.breadcrumb}}</a>
+	  <span class="breadcrumb-item active">{{page.breadcrumb-active}}</span>
+	</nav>
+	<div class="container">
+			{% for article in page.articles %}
+			<div class="row mt-5">
+				<div class="card__wrap">
+						<div class="card card--articles" >
+							<div class="card-header">
+	    					{{article.type}}
+	  					</div>
+							<div class="card-body">
+								<h3 class="card-title">
+									{{article.title}}
+								</h3>
+								<h6 class="card-subheading text-muted mb-3">
+									{{article.author}}
+								</h6>
+								<p class="card-text">
+									{{article.text}}
+								</p>
+								<code>
+									{{article.link}}
+								</code>
+								<div class="mt-4 text-right">
+									<a href="#" class="icons icon__save">
+										<i class="material-icons">save</i>
+									</a>
+									<a href="#" class="icons icon__check">
+										<i class="material-icons">check_circle</i>
+									</a>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			{% endfor %}
+	</div>
+	<script type="text/javascript" src="../../../js/main.js"></script>
+</body>
+</html>

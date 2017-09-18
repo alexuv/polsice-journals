@@ -54,15 +54,15 @@ gulp.task("image-compression", () =>
 
 // compress JS scripts (into one file)
 gulp.task("scripts", function() {
-	return (gulp
-			.src("src/js/*.js")
-			.pipe(sourcemaps.init())
-			.pipe(babel())
-			.pipe(concat("main.js"))
-			// .pipe(uglify())
-			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest("build/js"))
-			.pipe(connect.reload()) );
+	return gulp
+		.src("src/js/*.js")
+		.pipe(sourcemaps.init())
+		.pipe(babel())
+		.pipe(concat("main.js"))
+		.pipe(uglify())
+		.pipe(sourcemaps.write("."))
+		.pipe(gulp.dest("build/js"))
+		.pipe(connect.reload());
 });
 
 // live reload for html files
