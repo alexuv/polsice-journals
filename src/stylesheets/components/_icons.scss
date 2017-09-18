@@ -1,0 +1,29 @@
+.icons {
+	top: 10px;
+	position: relative;
+	text-decoration: none !important;
+}
+.icons i {
+	color: gray;
+	font-size: 30px;
+}
+
+.icon__check:hover i {
+	color: green;
+}
+.icon__check.icon--active i {
+	color: green;
+}
+.icon__check.icon--active:hover i {
+	color: gray;
+}
+
+.icon__save:hover i {
+	color: purple;
+}
+.icon__save.icon--active i {
+	color: purple;
+}
+.icon__save.icon--active:hover i {
+	color: gray;
+}

@@ -1,0 +1,24 @@
+{
+	"name": "dev-boilerplate",
+	"version": "1.0.0",
+	"description": "basic boilerplate for web dev",
+	"main": "gulpfile.js",
+	"dependencies": {},
+	"devDependencies": {
+		"babel-preset-env": "^1.6.0",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^3.1.1",
+		"gulp-babel": "^6.1.2",
+		"gulp-concat": "^2.6.0",
+		"gulp-connect": "^5.0.0",
+		"gulp-imagemin": "^3.3.0",
+		"gulp-ruby-sass": "^2.1.0",
+		"gulp-uglify": "^2.0.0",
+		"gulp-util": "^3.0.7"
+	},
+	"scripts": {
+		"gulp": "gulp"
+	},
+	"author": "",
+	"license": "ISC"
+}

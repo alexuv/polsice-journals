@@ -1,0 +1,45 @@
+.card__link {
+  color: gray; }
+
+.card__link:hover,
+.card__link:active {
+  text-decoration: none;
+  color: black; }
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.card__wrap:hover .card,
+.card__wrap:active .card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card--articles {
+  width: 1170px; }
+
+.icons {
+  top: 10px;
+  position: relative;
+  text-decoration: none !important; }
+
+.icons i {
+  color: gray;
+  font-size: 30px; }
+
+.icon__check:hover i {
+  color: green; }
+
+.icon__check.icon--active i {
+  color: green; }
+
+.icon__check.icon--active:hover i {
+  color: gray; }
+
+.icon__save:hover i {
+  color: purple; }
+
+.icon__save.icon--active i {
+  color: purple; }
+
+.icon__save.icon--active:hover i {
+  color: gray; }
