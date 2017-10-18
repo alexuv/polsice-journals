@@ -3,22 +3,21 @@
 * (config src and dist to use) + autoprefixer options (chrome liveReload extention required)
 * liveReload server, compile sass/scss, compress js, gulp watch
 */
-var gulp = require("gulp");
-var uglify = require("gulp-uglify");
-var sass = require("gulp-ruby-sass");
-var gutil = require("gulp-util");
-var connect = require("gulp-connect");
-var autoprefixer = require("gulp-autoprefixer");
-var imagemin = require("gulp-imagemin");
-var babel = require("gulp-babel");
-var sourcemaps = require("gulp-sourcemaps");
-var concat = require("gulp-concat");
+const gulp = require("gulp");
+const uglify = require("gulp-uglify");
+const sass = require("gulp-ruby-sass");
+const connect = require("gulp-connect");
+const autoprefixer = require("gulp-autoprefixer");
+const imagemin = require("gulp-imagemin");
+const babel = require("gulp-babel");
+const sourcemaps = require("gulp-sourcemaps");
+const concat = require("gulp-concat");
 
 /*
 * Use autoprefixer options to choose browser mixins support
 */
 // autoprefix options
-var autoprefixerOptions = {
+const autoprefixerOptions = {
 	browsers: [
 		"Chrome >= 40",
 		"IE >= 8",
@@ -29,7 +28,7 @@ var autoprefixerOptions = {
 };
 
 // set up live reload server (localhost:8080)
-gulp.task("connect", function() {
+gulp.task("connect", () => {
 	connect.server({
 		livereload: true
 	});
@@ -53,8 +52,8 @@ gulp.task("image-compression", () =>
 );
 
 // compress JS scripts (into one file)
-gulp.task("scripts", function() {
-	return gulp
+gulp.task("scripts", () =>
+	gulp
 		.src("src/js/*.js")
 		.pipe(sourcemaps.init())
 		.pipe(babel())
@@ -62,16 +61,16 @@ gulp.task("scripts", function() {
 		.pipe(uglify())
 		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest("build/js"))
-		.pipe(connect.reload());
-});
+		.pipe(connect.reload())
+);
 
 // live reload for html files
-gulp.task("html-reload", function() {
+gulp.task("html-reload", () => {
 	gulp.src("build/*.html").pipe(connect.reload());
 });
 
 // gulp watch
-gulp.task("watch", function() {
+gulp.task("watch", () => {
 	gulp.watch("src/js/*.js", ["scripts"]);
 	gulp.watch("src/stylesheets/**/*.scss", ["styles"]);
 	gulp.watch("build/*.html", ["html-reload"]);
